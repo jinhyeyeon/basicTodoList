@@ -10,10 +10,13 @@
         font-weight: bold;
     }
 
-    .nav {
+    .nav, .btn1 {
         position: absolute;
-        left: 20px;
         top: 0;
+    }
+
+    .nav {
+        left: 20px;
 
         li {
             display: inline-block;
@@ -22,6 +25,18 @@
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
+        }
+    }
+
+    .btn1 {
+        top: 25px;
+        right: 20px;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 20px;
+            padding: 0 5px 3px 0;
         }
     }
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import './header.scss';
-import {IoMdHome, IoIosNotifications} from "react-icons/io";
+import {IoMdHome, IoIosNotifications, IoMdCreate} from "react-icons/io";
 import IconBtn from '../Btn/IconBtn/IconBtn';
+import Btn1 from '../Btn/Btn1/Btn1';
 
 class Header extends React.Component {
     state={
@@ -38,6 +39,10 @@ class Header extends React.Component {
                         </li>
                     </ul>
                 </nav>
+                <Btn1>
+                    <span><IoMdCreate /></span>
+                    새 글 작성하기
+                </Btn1>
             </header>
         );
     }
