@@ -33,6 +33,7 @@ body {
     line-height:1.5;
     font-family: 'Noto Sans Korean', sans-serif;
     font-weight: 400;
+    background-color: #eee;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,7 +59,7 @@ a {
     color: #333
 }
 
-img, input, select {
+img, input, select, textarea {
     vertical-align: middle;
     border: 0;
     outline: none;
@@ -67,6 +68,7 @@ img, input, select {
 input, select, textarea, button {
     font-size: 13px;
     color: #333;
+    font-family: 'Noto Sans Korean', sans-serif;
 }
 
 .clearfix:after {
