@@ -5,7 +5,7 @@ import IconBtn from '../Btn/IconBtn/IconBtn';
 import Btn1 from '../Btn/Btn1/Btn1';
 
 class Header extends React.Component {
-    state={
+    state = {
         on: 'home'
     };
     
@@ -13,7 +13,7 @@ class Header extends React.Component {
         const {
             on
         } = this.state;
-        
+        const {onModal} = this.props;
         return (
             <header className="header">
                 <h1>TodoList</h1>
@@ -39,7 +39,7 @@ class Header extends React.Component {
                         </li>
                     </ul>
                 </nav>
-                <Btn1>
+                <Btn1 onClick={onModal}>
                     <span><IoMdCreate /></span>
                     새 글 작성하기
                 </Btn1>
