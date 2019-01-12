@@ -15,8 +15,10 @@ class IconBtn extends React.Component {
                 className={classNames('icon-btn', {on})}
                 onClick={onSelect}
             >
-                <span>{children}</span>
-                <p>{name}</p>
+                <p>
+                    <span>{children}</span>
+                    {name}
+                </p>
             </div>
         );
     }
