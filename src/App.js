@@ -36,6 +36,18 @@ class App extends React.Component {
           {modalOpen && (
               <Modal
                 onClose={() => this.setState({modalOpen: false})}
+                onWrite={text => {
+                  this.setState({
+                    posts: [
+                      {
+                        id: ++this.id,
+                        text
+                      },
+                      ...this.state.posts,
+                    ],
+                    modalOpen: false
+                  })
+                }}
               />
           )}
           <ul>
