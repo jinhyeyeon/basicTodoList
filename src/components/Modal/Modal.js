@@ -20,7 +20,7 @@ class Modal extends React.Component {
                     <h2>새 글 작성하기</h2>
                     <textarea
                         value={value}
-                        onChange={(e) => this.setState({value: e.target.value})}
+                        onChange={({target: {value}}) => this.setState({value})}
                         placeholder="새 글을 작성해주세요."
                     />
                     <Btn1>
