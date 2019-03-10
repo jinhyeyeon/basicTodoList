@@ -23,7 +23,7 @@ class Modal extends React.Component {
                         onChange={({target: {value}}) => this.setState({value})}
                         placeholder="새 글을 작성해주세요."
                     />
-                    <Btn1 onClick={onWrite}>
+                    <Btn1 onClick={() => onWrite(value)}>
                         <span><IoMdCreate /></span>
                         작성하기
                     </Btn1>
