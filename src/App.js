@@ -2,14 +2,32 @@ import React from 'react';
 import './styles/common.scss';
 import Header from './components/Header/Header';
 import Modal from './components/Modal/Modal';
+import PostItem from './components/PostItem/PostItem';
 
 class App extends React.Component {
   state = {
-    modalOpen: false
+    modalOpen: false,
+    posts: [
+      {
+        id: 2,
+        text: 'text1',
+        date: '2019-03-11 01:03:15',
+      },
+      {
+        id: 1,
+        text: 'text2',
+        date: '2019-03-10 01:03:15',
+      },
+      {
+        id: 0,
+        text: 'text3',
+        date: '2019-03-09 01:03:15',
+      },
+    ],
   };
 
   render() {
-    const {modalOpen} = this.state;
+    const {modalOpen, posts} = this.state;
     return (
         <>
           <Header
@@ -20,6 +38,11 @@ class App extends React.Component {
                 onClose={() => this.setState({modalOpen: false})}
               />
           )}
+          <ul>
+            {posts.map(post => 
+              <li><PostItem {...post} /></li>
+            )}
+          </ul>
         </>
     );
   }
