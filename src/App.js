@@ -52,7 +52,13 @@ class App extends React.Component {
           )}
           <ul>
             {posts.map(post => 
-              <li><PostItem {...post} /></li>
+              <li>
+                <PostItem
+                  key={post.id}
+                  onDelete={id => this.setState({posts: posts.filter(post => post.id !== id)})}
+                  {...post}
+                />
+              </li>
             )}
           </ul>
         </>
