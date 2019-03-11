@@ -5,7 +5,7 @@ import {IoMdTrash} from "react-icons/io";
  class PostItem extends React.Component {
     render() {
         const {
-            onDelte,
+            onDelete,
             text,
             date
         } = this.props;
@@ -18,7 +18,7 @@ import {IoMdTrash} from "react-icons/io";
                     className="delete"
                     onClick={(e) => {
                         e.preventDefault();
-                        onDelte && onDelte(e);
+                        onDelete && onDelete(e);
                     }} 
                 >
                     <IoMdTrash />

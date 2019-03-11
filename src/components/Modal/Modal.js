@@ -9,7 +9,7 @@ class Modal extends React.Component {
     };
 
     render() {
-        const {onClose} = this.props;
+        const {onClose, onWrite} = this.props;
         const {value} = this.state;
         return (
             <div className="modal">
@@ -23,7 +23,7 @@ class Modal extends React.Component {
                         onChange={({target: {value}}) => this.setState({value})}
                         placeholder="새 글을 작성해주세요."
                     />
-                    <Btn1>
+                    <Btn1 onClick={() => onWrite(value)}>
                         <span><IoMdCreate /></span>
                         작성하기
                     </Btn1>

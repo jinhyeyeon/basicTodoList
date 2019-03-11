@@ -36,11 +36,29 @@ class App extends React.Component {
           {modalOpen && (
               <Modal
                 onClose={() => this.setState({modalOpen: false})}
+                onWrite={text => {
+                  this.setState({
+                    posts: [
+                      {
+                        id: ++this.id,
+                        text
+                      },
+                      ...this.state.posts,
+                    ],
+                    modalOpen: false
+                  })
+                }}
               />
           )}
           <ul>
             {posts.map(post => 
-              <li><PostItem {...post} /></li>
+              <li>
+                <PostItem
+                  key={post.id}
+                  onDelete={id => this.setState({posts: posts.filter(post => post.id !== id)})}
+                  {...post}
+                />
+              </li>
             )}
           </ul>
         </>
