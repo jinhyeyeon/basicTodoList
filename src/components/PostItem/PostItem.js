@@ -24,7 +24,9 @@ function getFormattedDate(d) {
     render() {
         const {
             onDelete,
-            date, text
+            date,
+            text,
+            id
         } = this.props;
         return (
             <div className="post-item">
@@ -35,7 +37,7 @@ function getFormattedDate(d) {
                     className="delete"
                     onClick={(e) => {
                         e.preventDefault();
-                        onDelete && onDelete(e);
+                        onDelete && onDelete(id);
                     }} 
                 >
                     <IoMdTrash />
