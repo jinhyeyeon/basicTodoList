@@ -5,6 +5,7 @@ import Modal from './components/Modal/Modal';
 import PostItem from './components/PostItem/PostItem';
 
 class App extends React.Component {
+    id = 2;
     state = {
         modalOpen: false,
         posts: [
