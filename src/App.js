@@ -41,7 +41,8 @@ class App extends React.Component {
                                 posts: [
                                 {
                                     id: ++this.id,
-                                    text
+                                    text,
+                                    date: new Date(),
                                 },
                                 ...this.state.posts,
                                 ],
