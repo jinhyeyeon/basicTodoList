@@ -14,11 +14,11 @@ function getFormattedDate(d) {
     if (now - date < 60 * 1000) return '방금';
     // 10일 이내면 텍스트 형식
     if (differenceInDays(now, date) < 10) {
-        return distanceInWords(now, date, { locale: koLocale, addSuffix: true });
+        return distanceInWords(now, date, {locale: koLocale, addSuffix: true});
     }
     // 그 외의 경우엔 YYYY-MM-DD
     return format(date, 'YYYY-MM-DD');
-}
+};
 
  class PostItem extends React.Component {
     render() {

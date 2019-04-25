@@ -5,6 +5,23 @@ import Modal from './components/Modal/Modal';
 import PostItem from './components/PostItem/PostItem';
 
 class App extends React.Component {
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.posts !== prevState.posts) {
+            localStorage.setItem('posts', JSON.stringify(this.state.posts));
+        }
+    }
+
+    componentDidMount() {
+        const posts = localStorage.getItem('posts');
+        if (posts) {
+            const parsed = JSON.parse(posts);
+            this.setState({
+                posts: parsed,
+            });
+            this.id = parsed[0] ? parsed[0].id : 0;
+        }
+    }
+
     id = 2;
     state = {
         modalOpen: false,
