@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/common.scss';
+import './styles/app.scss';
 import Header from './components/Header/Header';
 import Modal from './components/Modal/Modal';
 import PostItem from './components/PostItem/PostItem';
@@ -47,7 +47,7 @@ class App extends React.Component {
     render() {
         const {modalOpen, posts} = this.state;
         return (
-            <>
+            <div className="app">
                 <Header
                     onModal={() => this.setState({modalOpen: true})}
                 />
@@ -69,7 +69,7 @@ class App extends React.Component {
                         }}
                     />
                 )}
-                <ul>
+                <ul className="post">
                     {posts.map(post => 
                         <li key={post.id}>
                             <PostItem
@@ -79,7 +79,7 @@ class App extends React.Component {
                         </li>
                     )}
                 </ul>
-            </>
+            </div>
         )
     }
 }
