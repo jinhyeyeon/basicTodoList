@@ -1,12 +1,12 @@
 import React from 'react';
 import './header.scss';
 import {IoMdHome, IoIosNotifications, IoMdCreate} from "react-icons/io";
-import IconBtn from '../Btn/IconBtn/IconBtn';
 import Btn1 from '../Btn/Btn1/Btn1';
+import {MENU_HOME, MENU_NOTICE} from '../../constants/menu';
 
 class Header extends React.Component {
     state = {
-        on: 'home'
+        on: MENU_HOME
     };
     
     render() {
@@ -20,26 +20,31 @@ class Header extends React.Component {
                 <nav className="nav">
                     <ul>
                         <li>
-                            <IconBtn
-                                on={on === 'home'}
-                                onSelect={() => this.setState({on: 'home'})}
-                                name="홈"
+                            <Btn1
+                                className="icon-btn"
+                                on={on === MENU_HOME}
+                                onClick={() => this.setState({on: 'home'})}
+                                icon={<IoMdHome />}
                             >
-                                <IoMdHome />
-                            </IconBtn>
+                                홈
+                            </Btn1>
                         </li>
                         <li>
-                            <IconBtn 
-                                on={on === 'notice'}
-                                onSelect={() => this.setState({on: 'notice'})}
-                                name="알림"
+                            <Btn1 
+                                className="icon-btn"
+                                on={on === MENU_NOTICE}
+                                onClick={() => this.setState({on: 'notice'})}
+                                icon={<IoIosNotifications />}
                             >
-                                <IoIosNotifications />
-                            </IconBtn>
+                                알림
+                            </Btn1>
                         </li>
                     </ul>
                 </nav>
-                <Btn1 onClick={onModal}>
+                <Btn1
+                    className="write-btn"
+                    onClick={onModal}
+                >
                     <span><IoMdCreate /></span>
                     새 글 작성하기
                 </Btn1>

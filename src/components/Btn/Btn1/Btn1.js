@@ -2,15 +2,30 @@ import React from 'react';
 import classNames from 'classnames';
 import './btn1.scss'
 
-const Btn1 = ({onClick, children, className}) => {
+const Btn1 = ({
+    onClick,
+    children,
+    className,
+    icon,
+    on
+}) => {
     return (
         <div
-            className={classNames('btn1', className)}
+            className={classNames('btn1', className, {on})}
             onClick={onClick}
         >
-            <p>{children}</p>
+            <p>
+                {icon && (
+                    <span>{icon}</span>
+                )}
+                {children}
+            </p>
         </div>
     );
 }
+
+Btn1.defaultProps = {
+    on: false
+};
 
 export default Btn1;
