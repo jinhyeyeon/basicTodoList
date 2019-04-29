@@ -2,4 +2,8 @@
 
 .app .post {
     margin: 30px 20px;
+
+    @media screen and (max-width: 550px) {
+        margin: 15px 10px;
+    }
 }

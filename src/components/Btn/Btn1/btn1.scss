@@ -3,22 +3,30 @@
     font-size: 14px;
     cursor: pointer;
 
+    p {
+        font-size: 30px;
+
+        span {
+            display: inline-block;
+            vertical-align: text-top;
+            padding: 12px 5px 0;
+            color: #fff;
+            font-size: 14px;
+        }
+    } 
+
     &.icon-btn {
         text-align: center;
         padding: 15px 20px;
 
         p {
-            font-size: 16px;
-            opacity: 0.5;
-            color: #fff;
+            padding-right: 5px;
 
             span {
-                display: inline-block;
-                vertical-align: middle;
-                font-size: 30px;
-                padding: 0 5px 3px 0;
+                font-size: 16px;
+                opacity: 0.5;
             }
-        }
+        } 
     }
 
     &.on {
@@ -27,6 +35,20 @@
 
         p {
             opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        p {
+            font-size: 20px;
+            
+            span {
+                display: none;
+            }
+        } 
+
+        &.icon-btn {
+            padding: 21px 10px 9px;
         }
     }
 }

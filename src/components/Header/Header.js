@@ -44,8 +44,8 @@ class Header extends React.Component {
                 <Btn1
                     className="write-btn"
                     onClick={onModal}
+                    icon={<IoMdCreate />}
                 >
-                    <span><IoMdCreate /></span>
                     새 글 작성하기
                 </Btn1>
             </header>

@@ -15,10 +15,10 @@ const Btn1 = ({
             onClick={onClick}
         >
             <p>
-                {icon && (
-                    <span>{icon}</span>
-                )}
-                {children}
+                {icon}
+                <span>
+                    {children}
+                </span>
             </p>
         </div>
     );

@@ -32,11 +32,29 @@
         top: 25px;
         right: 20px;
 
-        span {
-            display: inline-block;
-            vertical-align: middle;
+        p {
             font-size: 20px;
-            padding: 0 5px 3px 0;
+
+            span {
+                padding-top: 5px
+            }
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        padding: 15px 0;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .nav {
+            left: 10px;
+        }
+
+        .write-btn {
+            top: 20px;
+            right: 10px;
         }
     }
 }

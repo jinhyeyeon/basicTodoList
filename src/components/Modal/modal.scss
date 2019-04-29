@@ -47,13 +47,18 @@
         }
 
         .btn1 {
-            padding: 20px 10px;
-            text-align: right;
+            position: absolute;
+            right: 25px;
+            bottom: 25px;
             color: #333;
+            
+            p {
+                font-size: 14px;
+            }
 
             span {
-                vertical-align: middle;
-                padding-right: 3px;
+                padding: 1px 3px 0;
+                color: #333;
             }
         }
 
@@ -62,6 +67,26 @@
             right: 20px;
             top: 10px;
             font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .write-box {
+            width: 90%;
+            margin: -200px 0 0;
+            top: 50%;
+            left: 5%;
+
+            .btn1 p {
+                font-size: 20px;
+
+                span {
+                    display: inline-block;
+                    padding: 4px 3px 0;
+                    font-size: 15px;
+                }
+            }
+                
         }
     }
 }
