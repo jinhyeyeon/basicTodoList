@@ -2,4 +2,31 @@
     color: #fff;
     font-size: 14px;
     cursor: pointer;
+
+    &.icon-btn {
+        text-align: center;
+        padding: 15px 20px;
+
+        p {
+            font-size: 16px;
+            opacity: 0.5;
+            color: #fff;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 30px;
+                padding: 0 5px 3px 0;
+            }
+        }
+    }
+
+    &.on {
+        border-bottom: 4px solid #fff;
+        cursor: default;
+
+        p {
+            opacity: 1;
+        }
+    }
 }
